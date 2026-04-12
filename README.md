@@ -1,18 +1,33 @@
-# SkySync
-SkySync is a real-time weather dashboard that fetches live weather data and displays temperature, humidity, and wind details for any city, with optional visualizations for better insights.
+🌦 SkySync – Ultra Weather AI Dashboard
+
+🚀 Features
+
+🌍 Real-time weather data (API)
+🎨 Apple-style glass UI
+☁️ Animated clouds, rain & sun
+📊 Temperature visualization (Chart.js)
+🤖 AI-based temperature prediction (Linear Regression)
 
 
+🧠 Tech Stack
 
-## Features
-- Real-time weather data
-- City search
-- Temperature, humidity, wind
+Python (Flask)
+HTML, CSS, JavaScript
+Open-Meteo API
+Machine Learning (Scikit-learn)
 
-## Tech Stack
-- Python Flask
-- OpenWeather API
-- HTML/CSS
 
-## How to Run
+▶️ How to Run
+
 pip install -r requirements.txt
 python app.py
+
+🎯 Future Scope
+
+Deep learning (LSTM prediction)
+Mobile app version
+Live deployment
+
+👨‍💻 Author
+
+Anan Kumar Agarwal
