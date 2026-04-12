@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    font-family: -apple-system, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Background */
+.sky {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(to top, #4facfe, #00f2fe);
+}
+
+/* Clouds */
+.cloud {
+    position: absolute;
+    width: 120px;
+    height: 60px;
+    background: white;
+    border-radius: 50px;
+    top: 50px;
+    left: -150px;
+    animation: moveCloud 20s linear infinite;
+    pointer-events: none;
+}
+
+.cloud2 {
+    top: 120px;
+    animation-duration: 30s;
+}
+
+@keyframes moveCloud {
+    from { left: -150px; }
+    to { left: 100%; }
+}
+
+/* Container */
+.container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    margin-top: 60px;
+}
+
+/* Inputs */
+input {
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+button {
+    padding: 12px 15px;
+    border-radius: 20px;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Card */
+.card {
+    margin: 20px auto;
+    width: 300px;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(20px);
+}
+
+/* Temperature */
+.temp {
+    font-size: 45px;
+}
+
+/* AI Text */
+.ai {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ffe082;
+}
+
+/* Sun */
+.sun {
+    width: 60px;
+    height: 60px;
+    background: yellow;
+    border-radius: 50%;
+    margin: auto;
+    filter: blur(15px);
+    animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+    from { transform: scale(1); opacity: 0.7; }
+    to { transform: scale(1.2); opacity: 1; }
+}
+
+/* Rain */
+.rain {
+    position: relative;
+    height: 50px;
+}
+
+.rain::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    background: white;
+    left: 50%;
+    animation: rain 0.4s linear infinite;
+}
+
+@keyframes rain {
+    from { transform: translateY(-20px);}
+    to { transform: translateY(100px);}
+}

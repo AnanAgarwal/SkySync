@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ultra Weather AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<!-- Background -->
+<div class="sky">
+    <div class="cloud"></div>
+    <div class="cloud cloud2"></div>
+</div>
+
+<div class="container">
+
+    <h1>🌦 Ultra Weather AI</h1>
+
+    <form method="POST">
+        <input type="text" name="city" placeholder="Enter city..." required>
+        <button type="submit">Search</button>
+    </form>
+
+    {% if weather %}
+    <div class="card">
+
+        <!-- Weather Icon -->
+        <div class="icon">
+            {% if weather.code == 0 %}
+                ☀️ <div class="sun"></div>
+            {% elif weather.code < 60 %}
+                ☁️
+            {% else %}
+                🌧 <div class="rain"></div>
+            {% endif %}
+        </div>
+
+        <h2>{{ weather.city }}</h2>
+        <p class="temp">{{ weather.temp }}°C</p>
+        <p>🌬 {{ weather.wind }} km/h</p>
+
+        <!-- 🤖 AI Prediction -->
+        <p class="ai">🤖 Predicted Next Temp: {{ weather.prediction }}°C</p>
+
+        <!-- Chart -->
+        <canvas id="chart"></canvas>
+
+    </div>
+    {% endif %}
+
+</div>
+
+<script>
+{% if weather %}
+const tempData = {{ weather.hourly | tojson }};
+
+new Chart(document.getElementById("chart"), {
+    type: 'line',
+    data: {
+        labels: ["Now","1h","2h","3h","4h","5h"],
+        datasets: [{
+            label: "Temperature",
+            data: tempData,
+            borderWidth: 2
+        }]
+    }
+});
+{% endif %}
+</script>
+
+</body>
+</html>
