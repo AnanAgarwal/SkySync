@@ -1,33 +1,48 @@
-🌦 SkySync – Ultra Weather AI Dashboard
+# SkySync – Weather AI Dashboard
 
-🚀 Features
+**Live Demo:** https://skysync-qla1.onrender.com
 
-Real-time weather data (API)
-Apple-style glass UI
-Animated clouds, rain & sun
-Temperature visualization (Chart.js)
-AI-based temperature prediction (Linear Regression)
+SkySync is a weather dashboard that combines real-time weather data with machine learning-based predictions, presented through a clean UI.
 
+---
 
-🧠 Tech Stack
+## Features
 
-Python (Flask)
-HTML, CSS, JavaScript
-Open-Meteo API
-Machine Learning (Scikit-learn)
+* Real-time weather data (Open-Meteo API)
+* Temperature visualization (Chart.js)
+* ML-based temperature prediction (Linear Regression)
+* Responsive UI with weather animations
 
+---
 
-▶️ How to Run
+## Tech Stack
 
+* **Frontend:** HTML, CSS, JavaScript
+* **Backend:** Python (Flask)
+* **ML & API:** Scikit-learn, Open-Meteo API
+
+---
+
+## Setup
+
+```bash
+git clone https://github.com/AnanAgarwal/SkySync.git
+cd SkySync
 pip install -r requirements.txt
 python app.py
+```
 
-🎯 Future Scope
+Open: http://127.0.0.1:5000
 
-Deep learning (LSTM prediction)
-Mobile app version
-Live deployment
+---
 
-👨‍💻 Author
+## Deployment
+
+https://skysync-qla1.onrender.com
+
+---
+
+## Author
 
 Anan Kumar Agarwal
+https://github.com/AnanAgarwal
