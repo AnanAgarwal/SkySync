@@ -2,11 +2,11 @@
 
 🚀 Features
 
-🌍 Real-time weather data (API)
-🎨 Apple-style glass UI
-☁️ Animated clouds, rain & sun
-📊 Temperature visualization (Chart.js)
-🤖 AI-based temperature prediction (Linear Regression)
+Real-time weather data (API)
+Apple-style glass UI
+Animated clouds, rain & sun
+Temperature visualization (Chart.js)
+AI-based temperature prediction (Linear Regression)
 
 
 🧠 Tech Stack
